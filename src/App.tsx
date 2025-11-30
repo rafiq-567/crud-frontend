@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import PostIndex from './postindex'
+import PostIndex from './PostIndex';
 import PostCreate from './PostCreate'
 import PostEdit from './PostEdit'
 import PostShow from './PostShow'
