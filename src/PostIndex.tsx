@@ -13,13 +13,13 @@ export default function PostIndex() {
 
   useEffect(() => {
     axios
-      .get<Post[]>('http://crud-backend-production-c1e5.up.railway.app/api/posts')
+      .get<Post[]>('https://crud-backend-production-c1e5.up.railway.app/api/posts')
       .then((res) => setPosts(res.data))
       .catch((err) => console.error(err));
   }, []);
 
   const deletePost = async (id: number) => {
-  await axios.delete(`http://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`);
+  await axios.delete(`https://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`);
   setPosts(posts.filter((p) => p.id !== id));
 };
 

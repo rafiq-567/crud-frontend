@@ -11,7 +11,7 @@ export default function PostShow() {
 
     useEffect(() => {
         if (id) {
-            axios.get(`http://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`).then(res => {
+            axios.get(`https://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`).then(res => {
                 setTitle(res.data.title);
                 setBody(res.data.body)
             })

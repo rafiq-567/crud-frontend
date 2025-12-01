@@ -9,7 +9,7 @@ export default function PostCreate() {
 
     const submit = (e: React.FormEvent) => {
         e.preventDefault();
-        axios.post('http://crud-backend-production-c1e5.up.railway.app/api/posts', { title: title, body: body }).then( () => navigate('/') )
+        axios.post('https://crud-backend-production-c1e5.up.railway.app/api/posts', { title: title, body: body }).then( () => navigate('/') )
     }
     return (
         <div>
