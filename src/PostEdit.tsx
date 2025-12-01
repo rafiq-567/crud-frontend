@@ -11,7 +11,7 @@ export default function PostEdit() {
 
     useEffect(()=>{
         if(id){
-            axios.get(`http://localhost:8000/api/posts/${id}`).then(res=>{
+            axios.get(`http://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`).then(res=>{
                 setTitle(res.data.title);
                 setBody(res.data.body)
             })
@@ -20,7 +20,7 @@ export default function PostEdit() {
 
     const submit = (e: React.FormEvent) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/posts/${id}`, { title: title, body: body }).then(() => navigate('/'))
+        axios.put(`http://crud-backend-production-c1e5.up.railway.app/api/posts/${id}`, { title: title, body: body }).then(() => navigate('/'))
     }
     return (
         <div>
